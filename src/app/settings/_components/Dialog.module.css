@@ -1,0 +1,35 @@
+.container {
+    width: 350px;
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.container::backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: right;
+    gap: 0.25rem;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show::backdrop {
+    opacity: 1;
+}

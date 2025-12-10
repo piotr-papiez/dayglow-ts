@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  padding: 0;
+  background-color: #f7f8f9;
+  border: 1px solid #d1d1d1;
+  border-radius: 2rem;
+}
+
+.container li {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.container li:hover {
+  background-color: #f3f4f5;
+}
+
+.container li:first-of-type {
+  border-radius: 2rem 2rem 0 0;
+}
+
+.container li:last-of-type {
+  border-radius: 0 0 2rem 2rem;
+}
+
+.container li:only-of-type {
+  border-radius: 2rem;
+}
+
+.container li:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 0;
+  height: 1px;
+  background-color: #d1d1d1;
+  pointer-events: none;
+}
+
+.no-tasks {
+  padding: 1rem;
+}
+
+.title {
+    margin: 0 0 0.25rem 0;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4e4e4e;
+}

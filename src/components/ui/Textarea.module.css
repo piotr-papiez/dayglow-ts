@@ -1,0 +1,16 @@
+.textarea {
+    padding: 0.5rem;
+    resize: none;
+    border: 1px solid #d1d1d1;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+}
+
+.textarea:hover {
+    border-color: #b1b1b1;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #121212;
+}

@@ -1,0 +1,20 @@
+.hint {
+    display: flex;
+    height: 1.5rem;
+    justify-content: right;
+    font-size: 0.8rem;
+    text-align: right;
+    color: #b1b1b1;
+    gap: 0.25rem;
+    padding: 0.25rem 0.25rem;
+}
+
+.hint p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.valid {
+    color: #52b963;
+}

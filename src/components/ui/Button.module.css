@@ -1,0 +1,119 @@
+.button,
+.a {
+    --primary-background: #466df2;
+    --primary-background-hover: #305CDE;
+    --secondary-background: transparent;
+    --secondary-background-hover: #f3f4f5;
+    --tertiary-background: transparent;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 999rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.primary {
+    color: var(--light-font-color);
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-background);
+}
+
+.primary:hover {
+    background-color: var(--primary-background-hover);
+    border-color: var(--primary-background-hover);
+}
+
+.secondary {
+    color: var(--dark-font-color);
+    background-color: var(--secondary-background);
+    border: 1px solid #d1d1d1;
+}
+
+.secondary:hover {
+    background-color: var(--secondary-background-hover);
+}
+
+.tertiary {
+    color: var(--dark-font-color);
+    text-decoration: underline;
+    background-color: var(--tertiary-background);
+    border: 1px solid transparent;
+}
+
+.finish-task {
+    aspect-ratio: 1 / 1;
+    color: #4e4e4e;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.finish-task:hover {
+    color: var(--dark-font-color);
+    background-color: #cbead0;
+}
+
+.link {
+    width: fit-content;
+    padding: 0;
+    justify-self: center;
+    text-decoration: underline;
+}
+
+.menu {
+    width: 100%;
+    justify-content: left;
+    background-color: #f7f8f9;
+    padding: 1rem 1.5rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 2rem;
+}
+
+.menu:hover {
+    background-color: #f3f4f5;
+}
+
+.user-actions {
+    padding: 0.5rem;
+    color: var(--dark-font-color);
+    text-decoration: none;
+    background-color: var(--tertiary-background);
+    border: 1px solid transparent;
+}
+
+.user-actions:hover {
+    background-color: #e8e8e8;
+}
+
+.add-task {
+    display: flex;
+    position: fixed;
+    bottom: 1rem;
+    right: 0.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--light-font-color);
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-background);
+}
+
+.add-task:hover {
+    background-color: var(--primary-background-hover);
+    border: 1px solid var(--primary-background-hover);
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.medium {
+    font-size: 1rem;
+}
+
+.large {
+    font-size: 1.2rem;
+}
