@@ -9,7 +9,7 @@ import styles from "./UserActions.module.css";
 
 export default function UserActions() {
     return (
-        <menu className={styles["container"]}>
+        <menu className={styles.container}>
             <ul>
                 <li>
                     <Button
