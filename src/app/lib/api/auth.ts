@@ -70,11 +70,11 @@ export async function logoutUser(): Promise<void> {
 
     if (response.message === "SESSION_EXPIRED") {
         alert("Sesja nie istnieje.");
-        redirect("/auth/login");
+        // redirect("/auth/login");
     }
 
     if (response.message === "SERVER_ERROR") {
-        alert("Błąd serwera. Spróbuj później.");
+        // alert("Błąd serwera. Spróbuj później.");
         redirect("/auth/login");
     }
 }
@@ -93,7 +93,7 @@ export async function deleteUser(
     });
 
     if (response.ok) {
-        alert("Twoje konto zostało usunięte.")
+        // alert("Twoje konto zostało usunięte.")
         redirect("/auth/register");
     };
 

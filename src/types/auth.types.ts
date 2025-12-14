@@ -30,6 +30,10 @@ export type LoginResponseType =
     | { ok: true }
     | { ok: false, message: "USER_NOT_FOUND" | "INVALID_PASSWORD" | "SERVER_ERROR" };
 
+export type RefreshTokensResponseType =
+    | { ok: true }
+    | { ok: false, message: "INVALID_OR_MISSING_REFRESHTOKEN" | "UNAUTHORIZED" | "SERVER_ERROR" };
+
 export type LogoutResponseType =
     | { ok: true }
     | { ok: false, message: "SESSION_EXPIRED" | "SERVER_ERROR" };

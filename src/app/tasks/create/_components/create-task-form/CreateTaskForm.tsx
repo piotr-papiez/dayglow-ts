@@ -16,9 +16,10 @@ import styles from "./CreateTaskForm.module.css";
 
 // Types
 import { CreateTaskStateType } from "@/types/task.types";
+import { RefreshTokensResponseType } from "@/types/auth.types";
 
 export default function CreateTaskForm() {
-    const [actionHints, formAction] = useActionState<CreateTaskStateType, FormData>(createTask, null);
+    const [actionHints, formAction] = useActionState<CreateTaskStateType | RefreshTokensResponseType, FormData>(createTask, null);
 
     return (
         <section className={styles.container}>

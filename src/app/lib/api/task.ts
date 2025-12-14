@@ -12,10 +12,12 @@ import {
     FinishTaskResponseType, FinishTaskStateType
 } from "@/types/task.types.js";
 
+import { RefreshTokensResponseType } from "@/types/auth.types";
+
 export async function createTask(
-    prevState: CreateTaskStateType,
+    prevState: CreateTaskStateType | RefreshTokensResponseType,
     formData: FormData
-): Promise<CreateTaskStateType> {
+): Promise<CreateTaskStateType | RefreshTokensResponseType> {
     const title = formData.get("title");
     const description = formData.get("description");
 
@@ -35,7 +37,8 @@ export async function createTask(
     if (response.ok) redirect("/tasks");
 
     if (response.message === "ALREADY_EXISTS") return "Zadanie już istnieje";
-    if (response.message === "SERVER_ERROR") return "Błąd serwera. Spróbuj później"
+    if (response.message === "SERVER_ERROR") return "Błąd serwera. Spróbuj później";
+    if (response.message === "INVALID_OR_MISSING_REFRESHTOKEN") return "Sesja wygasła. Zaloguj się ponownie.";
 }
 
 export async function getTasks(): Promise<GetTasksResponseType> {
