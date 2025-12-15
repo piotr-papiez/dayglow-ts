@@ -32,7 +32,7 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
 
         // if (response.status !== 401) return response.json() as Promise<T>;
 
-        if (response.status === 401) {
+        if (response.status === 403) {
             if (!pendingRefresh) pendingRefresh = refreshTokens();
             const refreshed = await pendingRefresh;
 
