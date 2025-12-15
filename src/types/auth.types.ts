@@ -46,11 +46,3 @@ export type DeleteStateType =
 export type DeleteResponseType =
     | { ok: true }
     | { ok: false, message: "USER_NOT_FOUND" | "INVALID_PASSWORD" | "SERVER_ERROR" };
-
-export type AllResponsesTypes =
-    | Response
-    | RegisterResponseType
-    | LoginResponseType
-    | RefreshTokensResponseType
-    | LogoutResponseType
-    | DeleteResponseType;
