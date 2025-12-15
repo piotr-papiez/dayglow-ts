@@ -1,9 +1,18 @@
 .container {
   display: grid;
+  height: calc(100dvh - 4rem - 4rem - 3.5rem);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 0;
   background-color: #f7f8f9;
   border: 1px solid #d1d1d1;
   border-radius: 2rem;
+  margin-bottom: 4rem;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .container li {

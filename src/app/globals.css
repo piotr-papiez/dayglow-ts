@@ -1,6 +1,7 @@
 :root {
     --dark-font-color: #121212;
     --light-font-color: #f7f8f9;
+    --body-color: #f1f1f1;
 }
 
 * {
@@ -9,7 +10,9 @@
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: var(--body-color);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 a {

@@ -13,6 +13,9 @@ import { useTasks } from "@/contexts/task.context";
 // Hooks
 import { useEffect } from "react";
 
+// Styles
+import styles from "./page.module.css";
+
 // Utils
 import { getTasks } from "../lib/api/task";
 import { getUserData } from "../lib/api/user";
@@ -47,8 +50,10 @@ export default function Tasks() {
 
     return (
         <>
-            <UserActions />
-            <GreetingUser />
+            <div className={styles.header}>
+                <GreetingUser />
+                <UserActions />
+            </div>
             <TasksList />
             <Button element="a" variant="add-task" href="/tasks/create" size="large" startIconText="add"></Button>
         </>

@@ -1,0 +1,5 @@
+.h2 {
+    display: inline-flex;
+    margin-left: 0.25rem;
+    background-color: var(--body-color);
+}
