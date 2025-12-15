@@ -15,9 +15,6 @@ export function proxy(req: NextRequest): NextResponse {
     if (isAuthRoute && (accessToken || refreshToken)) return NextResponse.redirect(new URL("/tasks", req.url));
     if (isAppRoute && (!accessToken && !refreshToken)) return NextResponse.redirect(new URL("/auth/login", req.url));
 
-    // if (isAuthRoute && accessToken) return NextResponse.redirect(new URL("/tasks", req.url));
-    // if (isAppRoute && !accessToken) return NextResponse.redirect(new URL("/auth/login", req.url));
-
     return NextResponse.next();
 }
 

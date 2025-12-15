@@ -30,29 +30,33 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
     try {
         let response = await makeRequest();
 
-        if (response.status !== 401) return response.json() as Promise<T>;
+        // if (response.status !== 401) return response.json() as Promise<T>;
 
-        if (!pendingRefresh) pendingRefresh = refreshTokens();
-        const refreshed = await pendingRefresh;
+        if (response.status === 401) {
+            if (!pendingRefresh) pendingRefresh = refreshTokens();
+            const refreshed = await pendingRefresh;
 
-        if (!refreshed) {
+            if (!refreshed) {
+                pendingRefresh = null;
+                return {
+                    ok: false,
+                    message: "INVALID_OR_MISSING_REFRESHTOKEN"
+                } as T;
+            }
+
             pendingRefresh = null;
-            return {
-                ok: false,
-                message: "INVALID_OR_MISSING_REFRESHTOKEN"
-            } as T;
+
+            response = await makeRequest();
+
+            if (!response.ok) {
+                return {
+                    ok: false,
+                    message: "UNAUTHORIZED"
+                } as T;
+            }
         }
 
-        pendingRefresh = null;
 
-        response = await makeRequest();
-
-        if (!response.ok) {
-            return {
-                ok: false,
-                message: "UNAUTHORIZED"
-            } as T;
-        }
 
         return response.json() as Promise<T>;
     } catch (error) {
