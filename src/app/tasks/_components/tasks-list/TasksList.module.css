@@ -1,6 +1,5 @@
 .container {
   display: grid;
-  height: calc(100dvh - 4rem - 4rem - 3.5rem);
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -8,7 +7,7 @@
   background-color: #f7f8f9;
   border: 1px solid #d1d1d1;
   border-radius: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 .container::-webkit-scrollbar {

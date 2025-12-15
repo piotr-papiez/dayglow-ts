@@ -50,12 +50,16 @@ export default function Tasks() {
 
     return (
         <>
-            <div className={styles.header}>
-                <GreetingUser />
-                <UserActions />
+            <div className={styles.wrapper}>
+                <div className={styles.header}>
+                    <GreetingUser />
+                    <div className={styles["actions-wrapper"]}>
+                        <Button element="a" variant="add-task" href="/tasks/create" size="small" startIconText="add"></Button>
+                        <UserActions />
+                    </div>
+                </div>
+                <TasksList />
             </div>
-            <TasksList />
-            <Button element="a" variant="add-task" href="/tasks/create" size="large" startIconText="add"></Button>
         </>
     );
 }

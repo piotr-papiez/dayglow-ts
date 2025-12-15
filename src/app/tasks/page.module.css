@@ -1,3 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .header {
     display: flex;
     position: sticky;

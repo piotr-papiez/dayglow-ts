@@ -6,8 +6,8 @@ export default function GreetingUser() {
     const { userName } = useUser();
 
     return (
-        <h2 className={styles.h2}>
+        <h3 className={styles.h3}>
             Cześć, {userName}!
-        </h2>
+        </h3>
     );
 }
